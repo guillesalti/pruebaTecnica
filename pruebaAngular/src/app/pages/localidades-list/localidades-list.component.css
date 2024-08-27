@@ -1,0 +1,11 @@
+.localidadesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style: none;
+    gap: 1rem;
+    padding: 10px;
+    margin: 10px;
+  }
+.localidadesList li{
+    text-align: center;    
+  }

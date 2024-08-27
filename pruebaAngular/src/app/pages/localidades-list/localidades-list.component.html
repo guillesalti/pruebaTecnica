@@ -1,0 +1,11 @@
+<ng-container *ngIf="localidadesList$ | async as localidades">
+    <ul class="localidadesList">
+        <li *ngFor="let item of localidades; TrackBy : trackByFn">
+            <app-localidad-item [localidadesInfo]="item" />
+        </li>
+    </ul>
+</ng-container>
+<ng-container *ngIf="(errorMessage)">
+    <app-error-message [errorMessage]="errorMessage"/>
+</ng-container>
+

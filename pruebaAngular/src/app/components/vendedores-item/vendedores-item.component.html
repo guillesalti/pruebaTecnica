@@ -1,0 +1,16 @@
+
+<div class="vendedoresCard">
+    <ul>
+        <li class="name">{{vendedoresInfo.nombre}}</li>
+        <li> <b>{{vendedoresInfo.usuarioLogin}}</b></li>
+        <li>ID:  <b>{{vendedoresInfo.id}}</b></li>
+        <li><b>{{vendedoresInfo.fechaNacimiento}}</b></li>                
+        <li>Localidad:  <b>{{ vendedoresInfo.localidad.localidad}}</b></li> 
+        <li class="superv"><b>{{vendedoresInfo.observaciones}}</b></li>
+    </ul>
+    <div class="botones">
+        <button class="Editar" (click)="deleteVendedor(vendedoresInfo.id)">Editar</button>
+        <button class="Eliminar" >Eliminar</button>
+    </div>
+    
+</div>

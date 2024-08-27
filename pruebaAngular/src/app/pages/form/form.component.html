@@ -1,0 +1,24 @@
+<form [formGroup]="vendedorForm">
+    <label for="usuarioLogin">Usuario Login:</label>
+    <input id="usuarioLogin" formControlName="usuarioLogin" type="text" />
+  
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" type="text" />
+  
+    <label for="habilitado">Habilitado:</label>
+    <input id="habilitado" formControlName="habilitado" type="checkbox" />
+  
+    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input id="fechaNacimiento" formControlName="fechaNacimiento" type="date" />
+  
+    <label for="observaciones">Observaciones:</label>
+    <textarea id="observaciones" formControlName="observaciones"></textarea>
+  
+    <label for="localidad">Localidad:</label>
+    <select id="localidad" formControlName="localidad">
+      <option *ngFor="let item of localidades" [value]="item.id">{{ item.localidad }}</option>
+    </select>
+  
+    <button type="submit" (click)="postVendedor()">Guardar</button>
+    <button type="button" (click)="cancel()">Cancelar</button> 
+</form>

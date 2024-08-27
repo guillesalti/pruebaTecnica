@@ -1,0 +1,13 @@
+<ng-container *ngIf="vendedoresList$ | async as vendedores">
+    
+    <ul class="listaVendedores">
+        <li *ngFor="let item of vendedores; TrackBy : trackByFn">
+            <app-vendedores-item [vendedoresInfo]="item" />
+        </li>
+    </ul>
+
+    <button (click)="navigateToForm()">Agregar Vendedor</button>
+</ng-container>
+<ng-container *ngIf="(errorMessage)">
+    <app-error-message [errorMessage]="errorMessage"/>
+</ng-container>

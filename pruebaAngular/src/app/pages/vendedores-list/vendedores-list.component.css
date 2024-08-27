@@ -1,0 +1,28 @@
+
+.listaVendedores{
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+button{
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    background-color: #4a47fc; 
+    color: white;
+    margin-left: 20px;
+    height: 1.5rem;
+}
+button:hover {
+    background-color: #2a26f1;
+}
+
+button:active {
+    transform: scale(0.98);
+}
